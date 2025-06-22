@@ -8,7 +8,7 @@ Dataflare is a simple, easy-to-use database manager. It is easy to connect to yo
 
 #### Supported Databases
 
-`ClickHouse` `Cloudflare D1` `CockroachDB` `Databend` `DuckDB` `libSQL` `MariaDB` `MySQL` `PostgreSQL` `QuestDB` `Rqlite` `SQLCipher` `SQLite` `SQL Server`
+`ClickHouse` `Cloudflare D1` `CockroachDB` `Databend` `DuckDB` `EchoLite` `libSQL` `MariaDB` `MySQL` `PostgreSQL` `QuestDB` `Rqlite` `SQLCipher` `SQLite` `SQL Server`
 
 #### Supported Platform
 
