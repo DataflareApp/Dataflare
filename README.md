@@ -12,6 +12,7 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 
 #### Supported Databases
 
+-   [BigQuery](https://cloud.google.com/bigquery)
 -   [Amazon S3](https://aws.amazon.com/s3/)
 -   [ClickHouse](https://github.com/ClickHouse/ClickHouse)
 -   [Cloudflare D1](https://developers.cloudflare.com/d1/)
