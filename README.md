@@ -1,6 +1,6 @@
 # Dataflare
 
-![Preview](https://github.com/user-attachments/assets/642c092a-9387-4d70-924b-f736c080f87e)
+![Dataflare](https://github.com/user-attachments/assets/78385d49-d686-4e21-87a2-2998c9f58cea)
 
 ---
 
