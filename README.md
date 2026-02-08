@@ -32,6 +32,7 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 -   [SQLCipher](https://github.com/sqlcipher/sqlcipher)
 -   [SQLite](https://github.com/sqlite/sqlite)
 -   [SQL Server](https://www.microsoft.com/en-us/sql-server)
+-   [Trino](https://github.com/trinodb/trino)
 -   [Workers Analytics Engine](https://developers.cloudflare.com/analytics/analytics-engine/)
 
 #### Supported Platform
