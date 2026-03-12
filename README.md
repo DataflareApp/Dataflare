@@ -20,6 +20,7 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 -   [Cloudflare Workers KV](https://developers.cloudflare.com/kv/)
 -   [CockroachDB](https://github.com/cockroachdb/cockroach)
 -   [Databend](https://github.com/databendlabs/databend)
+-   [Databricks](https://www.databricks.com/)
 -   [DuckDB](https://github.com/duckdb/duckdb)
 -   [EchoLite](https://github.com/DataflareApp/echolite)
 -   [libSQL](https://github.com/tursodatabase/libsql)
