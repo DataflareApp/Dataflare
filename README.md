@@ -27,6 +27,7 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 -   [MariaDB](https://github.com/MariaDB/server)
 -   [MySQL](https://github.com/mysql/mysql-server)
 -   [PostgreSQL](https://github.com/postgres/postgres)
+-   [Presto](https://github.com/prestodb/presto)
 -   [QuestDB](https://github.com/questdb/questdb)
 -   [Redis](https://github.com/redis/redis)
 -   [Rqlite](https://github.com/rqlite/rqlite)
