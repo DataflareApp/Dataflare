@@ -29,6 +29,7 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 -   [PostgreSQL](https://github.com/postgres/postgres)
 -   [Presto](https://github.com/prestodb/presto)
 -   [QuestDB](https://github.com/questdb/questdb)
+-   [R2 SQL](https://developers.cloudflare.com/r2-sql/)
 -   [Redis](https://github.com/redis/redis)
 -   [Rqlite](https://github.com/rqlite/rqlite)
 -   [SQLCipher](https://github.com/sqlcipher/sqlcipher)
