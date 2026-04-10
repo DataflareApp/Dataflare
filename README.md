@@ -24,6 +24,7 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 -   [DuckDB](https://github.com/duckdb/duckdb)
 -   [EchoLite](https://github.com/DataflareApp/echolite)
 -   [libSQL](https://github.com/tursodatabase/libsql)
+-   [Manticore Search](https://github.com/manticoresoftware/manticoresearch)
 -   [MariaDB](https://github.com/MariaDB/server)
 -   [MySQL](https://github.com/mysql/mysql-server)
 -   [PostgreSQL](https://github.com/postgres/postgres)
