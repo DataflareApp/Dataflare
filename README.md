@@ -23,7 +23,6 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 -   [Databricks](https://www.databricks.com/)
 -   [DuckDB](https://github.com/duckdb/duckdb)
 -   [EchoLite](https://github.com/DataflareApp/echolite)
--   [libSQL](https://github.com/tursodatabase/libsql)
 -   [Manticore Search](https://github.com/manticoresoftware/manticoresearch)
 -   [MariaDB](https://github.com/MariaDB/server)
 -   [MySQL](https://github.com/mysql/mysql-server)
@@ -37,6 +36,7 @@ This repository is used to collect Dataflare `bugs` and `feedback`. If you encou
 -   [SQLite](https://github.com/sqlite/sqlite)
 -   [SQL Server](https://www.microsoft.com/en-us/sql-server)
 -   [Trino](https://github.com/trinodb/trino)
+-   [Turso & libSQL](https://github.com/tursodatabase/turso)
 -   [Workers Analytics Engine](https://developers.cloudflare.com/analytics/analytics-engine/)
 
 #### Supported Platform
