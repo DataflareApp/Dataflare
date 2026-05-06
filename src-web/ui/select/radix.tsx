@@ -19,8 +19,12 @@ import { SelectProps } from './index'
 const EMPTY_VALUE = '__EMPTY_TEXT_PLACEHOLDER'
 
 const Select = ({ className, options, value, onChange }: SelectProps) => {
+    const val = value === '' ? EMPTY_VALUE : value
+    const change = (value: string) => {
+        onChange(value === EMPTY_VALUE ? '' : value)
+    }
     return (
-        <Root value={value === '' ? EMPTY_VALUE : value} onValueChange={onChange}>
+        <Root value={val} onValueChange={change}>
             <Trigger
                 className={clsx(
                     className,
