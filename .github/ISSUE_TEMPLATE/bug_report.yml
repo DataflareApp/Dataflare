@@ -1,7 +1,7 @@
 name: 🐞 Bug Report
-title: "[BUG] "
+title: '[BUG] '
 description: Report a bug
-labels: ["bug"]
+labels: ['bug']
 
 body:
   - type: textarea
@@ -17,8 +17,8 @@ body:
     id: info
     attributes:
       label: Platform and Database
-      description: "Operating system and version / database and version you are using"
-      placeholder: "macOS 14.0, MySQL 8.0"
+      description: 'Operating system and version / database and version you are using'
+      placeholder: 'macOS 14.0, MySQL 8.0'
       render: text
     validations:
       required: true

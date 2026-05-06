@@ -1,13 +1,13 @@
 name: 💬 Question
-title: "[Question] "
+title: '[Question] '
 description: Ask a question
-labels: ["question"]
+labels: ['question']
 
 body:
   - type: textarea
     id: question
     attributes:
       label: What is your question?
-      description: "Describe what you want to know about"
+      description: 'Describe what you want to know about'
     validations:
       required: true

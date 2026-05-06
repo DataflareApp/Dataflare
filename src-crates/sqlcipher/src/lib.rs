@@ -52,7 +52,8 @@ fn free_error(dylib: &Dylib, error: ErrorMessage) -> Result<Option<Error>, Error
 impl Connection {
     pub async fn connect(path: &str, readonly: bool, key: &str) -> Result<Self> {
         let mut error = ErrorMessage::null();
-        let dylib = Dylib::try_load("sqlcipher", SQLCIPHER_DRIVER_VERSION, SQLCIPHER_SHA256).await?;
+        let dylib =
+            Dylib::try_load("sqlcipher", SQLCIPHER_DRIVER_VERSION, SQLCIPHER_SHA256).await?;
         let options = ConnectOptions {
             path: StringRef::new(path),
             readonly,
