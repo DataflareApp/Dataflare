@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        color-scheme: light;
+        --color-main: 255 255 255;
+        --color-primary: #000;
+        --color-secondary: #3d3d3d;
+        --color-tertiary: #909194;
+        --color-quarternary: #c9c9cb;
+        --color-separator: #e4e4e7;
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            color-scheme: dark;
+            --color-main: 17 17 17;
+            --color-primary: #fff;
+            --color-secondary: #dcdcdc;
+            --color-tertiary: #9d9da4;
+            --color-quarternary: #5e5d61;
+            --color-separator: #262626;
+        }
+    }
+}
+
+@font-face {
+    font-family: JetBrainsMono;
+    src: url(./JetBrainsMono-Regular.woff2);
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    cursor: default;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+button {
+    cursor: default;
+}
+
+input::-ms-reveal {
+    display: none;
+}
+
+button:focus,
+select:focus,
+input:focus,
+textarea:focus,
+span[role='slider']:focus,
+span[role='switch']:focus,
+span[role='checkbox']:focus {
+    outline: 1px solid theme('colors.theme');
+    outline-offset: 2px;
+}
+
+/*
+    Scrollbar
+*/
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/*
+    Linux window decoration
+*/
+body.linux-decoration-border {
+    border: 1px solid theme('colors.separator');
+}
+
+/*
+    SplitView
+*/
+body.split-view-dragging-row * {
+    cursor: row-resize !important;
+    user-select: none !important;
+    touch-action: none !important;
+}
+body.split-view-dragging-col * {
+    cursor: col-resize !important;
+    user-select: none !important;
+    touch-action: none !important;
+}
+
+/* xyflow background */
+:root {
+    --xy-background-pattern-color-props: #b9b9b9;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --xy-background-pattern-color-props: #4c4c4c;
+    }
+}
+/* xyflow selected node */
+.react-flow__node.selected {
+    outline: none;
+}
+.react-flow__node.selected > :first-child {
+    border: 1px solid theme('colors.theme');
+}
+
+/*
+    radix-ui Popover component uses a transform animation  
+    When using `transform: scale` in Chrome, having `will-change` causes blurriness—this is a Chrome bug
+    https://stackoverflow.com/questions/14677490/blurry-text-after-using-css-transform-scale-in-chrome
+*/
+div[data-radix-popper-content-wrapper] {
+    will-change: auto !important;
+}
+
+/*
+    AI Chat loading bar
+*/
+.ai-chat-loading {
+    margin: 4px 16px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 4px;
+    border-radius: 4px;
+    position: relative;
+}
+@media (prefers-color-scheme: dark) {
+    .ai-chat-loading {
+        background-color: rgba(255, 255, 255, 0.04);
+    }
+}
+.ai-chat-loading::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: theme('colors.theme');
+    border-radius: 4px;
+    animation: ai-chat-progress-move 0.8s ease-in-out infinite alternate;
+    width: 40%;
+}
+@keyframes ai-chat-progress-move {
+    0% {
+        left: 0;
+        width: 20%;
+    }
+    50% {
+        width: 40%;
+    }
+    to {
+        left: 80%;
+        width: 20%;
+    }
+}

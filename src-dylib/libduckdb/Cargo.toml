@@ -1,0 +1,8 @@
+[workspace]
+resolver = "3"
+members = ["duckdb", "libduckdb"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"

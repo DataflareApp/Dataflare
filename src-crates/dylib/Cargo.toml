@@ -1,0 +1,15 @@
+[package]
+name = "dylib"
+edition.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+
+[dependencies]
+thiserror = { workspace = true }
+dir = { path = "../dir" }
+reqwest = { path = "../reqwest" }
+tokio = { workspace = true, features = ["fs", "sync"] }
+current_platform = "0.2.0"
+libloading = "0.8.5"
+sha2 = "0.10.8"

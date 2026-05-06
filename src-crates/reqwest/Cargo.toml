@@ -1,0 +1,12 @@
+[package]
+name = "reqwest"
+edition.workspace = true
+
+[dependencies]
+reqwest-inner = { package = "reqwest", git = "https://github.com/DataflareApp/reqwest", rev = "fea804aac37a92bd5ffc041d5b4edca55fd151aa", features = [
+    "gzip",
+    "json",
+] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }

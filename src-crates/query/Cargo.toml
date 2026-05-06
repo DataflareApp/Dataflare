@@ -1,0 +1,8 @@
+[package]
+name = "query"
+edition.workspace = true
+
+[dependencies]
+fbon = { path = "../fbon" }
+serde = { workspace = true }
+serde_json = { workspace = true }

@@ -1,0 +1,18 @@
+[workspace]
+
+[package]
+name = "liblibsql"
+edition = "2024"
+
+[lib]
+name = "libsql"
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
+
+[dependencies]
+libsql = { version = "0.9.30", default-features = false, features = ["core"] }
+tokio = { version = "1.52.1", features = ["rt"] }

@@ -1,0 +1,8 @@
+[package]
+name = "sqlstmt"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+sqlparser = "0.58.0"
+sqlformat = { git = "https://github.com/shssoichiro/sqlformat-rs", rev = "227688f2dd6885f3d8dbe05e5d3df3157dd3cb2e" }

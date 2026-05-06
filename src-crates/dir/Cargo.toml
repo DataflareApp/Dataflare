@@ -1,0 +1,9 @@
+[package]
+name = "dir"
+edition.workspace = true
+
+[lib]
+path = "dir.rs"
+
+[dependencies]
+dirs = "6.0.0"

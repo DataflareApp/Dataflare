@@ -1,0 +1,14 @@
+[package]
+name = "backup"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+shell = { path = "../shell" }
+proxy = { path = "../proxy" }
+tokio = { workspace = true, features = [
+    "macros",
+    "io-util",
+    "process",
+    "rt-multi-thread",
+] }

@@ -1,0 +1,8 @@
+[package]
+name = "batch-insert"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+rand = { workspace = true }
+uuid = { workspace = true }

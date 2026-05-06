@@ -1,0 +1,17 @@
+[workspace]
+
+[package]
+name = "libturso"
+edition = "2024"
+
+[lib]
+name = "turso"
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
+
+[dependencies]
+turso_sdk_kit = "0.5.3"

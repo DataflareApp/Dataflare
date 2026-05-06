@@ -1,0 +1,101 @@
+// From:
+// https://developers.cloudflare.com/r2-sql/sql-reference/
+// https://developers.cloudflare.com/r2-sql/sql-reference/scalar-functions/
+// https://developers.cloudflare.com/r2-sql/sql-reference/complex-types/
+// Date: 2026-04-21
+export default [
+    // Statement and schema keywords
+    'DATABASES',
+    'DESCRIBE',
+    'EXPLAIN',
+    'NAMESPACES',
+    'SELECT',
+    'SHOW',
+    'TABLES',
+    'WITH',
+
+    // Clause and modifier keywords
+    'AS',
+    'ASC',
+    'BY',
+    'DESC',
+    'FROM',
+    'GROUP',
+    'HAVING',
+    'LIMIT',
+    'ORDER',
+    'WHERE',
+
+    // Predicate and logical keywords
+    'AND',
+    'BETWEEN',
+    'FALSE',
+    'ILIKE',
+    'IN',
+    'IS',
+    'LIKE',
+    'NOT',
+    'NULL',
+    'OR',
+    'SIMILAR',
+    'TO',
+    'TRUE',
+    'UNKNOWN',
+
+    // Expression keywords
+    'CASE',
+    'CAST',
+    'DAY',
+    'ELSE',
+    'END',
+    'EXTRACT',
+    'FOR',
+    'INTERVAL',
+    'MONTH',
+    'PLACING',
+    'THEN',
+    'TRY_CAST',
+    'WHEN',
+    'YEAR',
+
+    // Type keywords
+    'ARRAY',
+    'BOOLEAN',
+    'BYTEA',
+    'DATE',
+    'DOUBLE',
+    'FLOAT',
+    'INT',
+    'INTEGER',
+    'MAP',
+    'STRING',
+    'STRUCT',
+    'TIMESTAMP',
+
+    // Common combinations
+    'CASE WHEN',
+    'GROUP BY',
+    'IS FALSE',
+    'IS NOT FALSE',
+    'IS NOT NULL',
+    'IS NOT TRUE',
+    'IS NOT UNKNOWN',
+    'IS NULL',
+    'IS TRUE',
+    'IS UNKNOWN',
+    'NOT BETWEEN',
+    'NOT ILIKE',
+    'NOT IN',
+    'NOT LIKE',
+    'ORDER BY',
+    'SELECT *',
+    'SELECT * FROM',
+    'SELECT COUNT(*)',
+    'SELECT COUNT(*) FROM',
+    'EXPLAIN FORMAT JSON',
+    'SHOW DATABASES',
+    'SHOW NAMESPACES',
+    'SHOW TABLES',
+    'SHOW TABLES IN',
+    'SIMILAR TO'
+]

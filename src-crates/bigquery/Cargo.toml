@@ -1,0 +1,18 @@
+[package]
+name = "bigquery"
+edition.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+
+[dependencies]
+thiserror = { workspace = true }
+tokio = { workspace = true }
+base64 = { workspace = true }
+query = { path = "../query" }
+# NOTE:
+# Be very careful when upgrading the BigQuery version to prevent accidental changes in data types, because currently this library basically returns values that are all String
+# If you need to make changes, please check all BigQuery-related content in ./src/lib.rs[decode_value] and db.ts
+# Google has a project in progress: https://github.com/googleapis/google-cloud-rust
+google-cloud-bigquery = "0.15.0"
+google-cloud-gax = "0.19.2"

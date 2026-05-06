@@ -1,0 +1,10 @@
+[package]
+name = "sqlcipher"
+edition.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+
+[dependencies]
+query = { path = "../query" }
+dylib = { path = "../dylib" }

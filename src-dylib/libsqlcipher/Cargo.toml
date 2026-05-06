@@ -1,0 +1,17 @@
+[workspace]
+
+[package]
+name = "libsqlcipher"
+edition = "2024"
+
+[lib]
+name = "sqlcipher"
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
+
+[dependencies]
+rusqlite = { version = "0.39.0", features = ["column_decltype", "bundled-sqlcipher-vendored-openssl"] }

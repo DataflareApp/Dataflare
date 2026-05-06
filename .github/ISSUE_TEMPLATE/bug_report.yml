@@ -1,0 +1,24 @@
+name: 🐞 Bug Report
+title: "[BUG] "
+description: Report a bug
+labels: ["bug"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear description of what the bug is. Include screenshots if applicable.
+      placeholder: Bug description
+    validations:
+      required: true
+
+  - type: textarea
+    id: info
+    attributes:
+      label: Platform and Database
+      description: "Operating system and version / database and version you are using"
+      placeholder: "macOS 14.0, MySQL 8.0"
+      render: text
+    validations:
+      required: true

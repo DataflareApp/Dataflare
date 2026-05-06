@@ -1,0 +1,10 @@
+[package]
+name = "libduckdb"
+edition = "2024"
+
+[lib]
+name = "duckdb"
+crate-type = ["cdylib"]
+
+[dependencies]
+duckdb = { path = "../duckdb" }

@@ -1,0 +1,34 @@
+{
+    "$schema": "../gen/schemas/desktop-schema.json",
+    "identifier": "default",
+    "windows": ["*"],
+    "permissions": [
+        "core:default",
+        "core:window:allow-show",
+        "core:window:allow-close",
+        "core:window:allow-minimize",
+        "core:window:allow-toggle-maximize",
+        "core:window:allow-destroy",
+        "core:window:allow-set-title",
+        "core:window:allow-start-dragging",
+        "core:webview:allow-set-webview-zoom",
+        "core:webview:allow-create-webview-window",
+        "dialog:default",
+        "fs:read-all",
+        "fs:write-all",
+        "process:default",
+        "updater:default",
+        "clipboard-manager:allow-read-text",
+        "clipboard-manager:allow-write-text",
+        "opener:allow-open-url",
+        "opener:allow-default-urls",
+        {
+            "identifier": "opener:allow-reveal-item-in-dir",
+            "allow": [
+                {
+                    "path": "**"
+                }
+            ]
+        }
+    ]
+}

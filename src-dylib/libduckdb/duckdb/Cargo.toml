@@ -1,0 +1,16 @@
+[package]
+name = "duckdb"
+edition = "2024"
+
+[dependencies]
+bit-vec = "0.8.0"
+chrono = "0.4.42"
+thiserror = "2.0.16"
+uuid = "1.18.1"
+num-bigint = "0.4.6"
+libduckdb-sys = { version = "1.10502.0", default-features = false, features = [
+    "bundled",
+] }
+rust_decimal = { version = "1.38.0", default-features = false, features = [
+    "std",
+] }

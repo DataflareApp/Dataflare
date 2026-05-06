@@ -1,0 +1,18 @@
+[package]
+name = "cli"
+edition.workspace = true
+
+[[bin]]
+name = "dataflare-cli"
+path = "cli.rs"
+
+[dependencies]
+dir = { path = "../src-crates/dir" }
+database = { path = "../src-crates/database" }
+client-store = { path = "../src-crates/client-store" }
+thiserror = { workspace = true }
+hex = { workspace = true }
+query = { path = "../src-crates/query" }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+clap = { version = "4.6.1", features = ["derive"] }
+comfy-table = "7.2.2"

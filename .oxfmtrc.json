@@ -1,0 +1,28 @@
+{
+    "$schema": "./node_modules/oxfmt/configuration_schema.json",
+    "printWidth": 110,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "quoteProps": "preserve",
+    "trailingComma": "none",
+    "jsxSingleQuote": true,
+    "sortImports": {
+        "stylesheet": "./src-web/assets/global.css",
+        "newlinesBetween": false
+    },
+    "sortTailwindcss": {
+        "functions": ["clsx", "cn"],
+        "preserveWhitespace": false
+    },
+    "ignorePatterns": ["*.toml"],
+    "overrides": [
+        {
+            "files": ["*.yml", "*.yaml"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}

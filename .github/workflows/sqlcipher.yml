@@ -1,0 +1,103 @@
+name: sqlcipher
+
+on:
+  push:
+    tags:
+      - 'sqlcipher-v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ${{ matrix.job.target }}
+    runs-on: ${{ matrix.job.os }}
+    strategy:
+      matrix:
+        job:
+          - target: x86_64-unknown-linux-gnu
+            os: ubuntu-22.04
+            prefix: lib
+            suffix: so
+
+          - target: aarch64-unknown-linux-gnu
+            os: ubuntu-22.04-arm
+            prefix: lib
+            suffix: so
+
+          - target: x86_64-apple-darwin
+            os: macos-26
+            prefix: lib
+            suffix: dylib
+
+          - target: aarch64-apple-darwin
+            os: macos-26
+            prefix: lib
+            suffix: dylib
+
+          - target: x86_64-pc-windows-msvc
+            os: windows-2022
+            prefix:
+            suffix: dll
+
+          - target: aarch64-pc-windows-msvc
+            os: windows-11-arm
+            prefix:
+            suffix: dll
+
+    env:
+      WORKING_DIR: src-dylib/libsqlcipher
+
+    defaults:
+      run:
+        working-directory: ${{ env.WORKING_DIR }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+          targets: ${{ matrix.job.target }}
+
+      - name: Cargo test
+        run: |
+          cargo test --release --target ${{ matrix.job.target }}
+
+      - name: Cargo build
+        run: |
+          cargo build --release --target ${{ matrix.job.target }}
+
+      - name: Extract version
+        if: startsWith(github.ref, 'refs/tags/')
+        id: version
+        shell: bash
+        run: |
+          VERSION="${{ github.ref_name }}"
+          VERSION="${VERSION#sqlcipher-v}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Organize file
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: bash
+        run: |
+          mkdir -p drivers
+
+      - name: Move sqlcipher
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: bash
+        run: |
+          mv ./target/${{ matrix.job.target }}/release/${{ matrix.job.prefix }}sqlcipher.${{ matrix.job.suffix }} ./drivers/${{ matrix.job.prefix }}sqlcipher-${{ matrix.job.target }}-${{ steps.version.outputs.version }}.${{ matrix.job.suffix }}
+
+      - name: Upload to R2
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: wyhaya/upload-cloudflare-r2@9ac9d847e87f5674ed5f14c11a2f0f44d8a5c368
+        with:
+          account_id: ${{ secrets.R2_ACCOUNT_ID }}
+          access_key_id: ${{ secrets.R2_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          bucket: ${{ secrets.R2_BUCKET }}
+          source_directory: ${{ env.WORKING_DIR }}/drivers
+          destination_directory: drivers
+          cache_control: |
+            .*    public, max-age=2678400, immutable

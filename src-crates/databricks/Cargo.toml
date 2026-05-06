@@ -1,0 +1,13 @@
+[package]
+name = "databricks"
+edition.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+
+[dependencies]
+thrift = "0.17"
+tokio = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { path = "../reqwest" }
+proxy = { path = "../proxy" }

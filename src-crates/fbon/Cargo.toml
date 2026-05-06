@@ -1,0 +1,6 @@
+[package]
+name = "fbon"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true }

@@ -1,0 +1,51 @@
+[package]
+name = "database"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+libsql-local = { path = "../libsql-local" }
+turso-local = { path = "../turso-local" }
+turso-remote = { path = "../turso-remote" }
+tokio-util = { version = "0.7", features = ["compat"] }
+futures-util = { workspace = true }
+query = { path = "../query" }
+proxy = { path = "../proxy" }
+dylib = { path = "../dylib" }
+rusqlite = { workspace = true }
+sqlcipher = { path = "../sqlcipher" }
+echolite = { package = "client", git = "https://github.com/DataflareApp/echolite.git", tag = "v0.2.0" }
+rqlite = { path = "../rqlite" }
+cloudflare-d1 = { path = "../cloudflare-d1" }
+workers-analytics-engine = { path = "../workers-analytics-engine" }
+r2sql = { path = "../r2sql" }
+mysql = { path = "../mysql" }
+pgsq = { path = "../pgsq" }
+duckdb = { path = "../duckdb" }
+clickhouse = { path = "../clickhouse" }
+databend = { path = "../databend" }
+bigquery = { path = "../bigquery" }
+trino = { path = "../trino" }
+presto = { path = "../presto" }
+databricks = { path = "../databricks" }
+batch-insert = { path = "../batch-insert" }
+bytes = "1.6"
+kvdb = { path = "../kvdb" }
+connection-config = { path = "../connection-config" }
+
+# MSSQL
+# Compared to the original repository, the changes: https://github.com/DataflareApp/tiberius/commit/9cfc142f1c501c08d59e6c0b0ad62a2712cfc173
+# Must use 'rustls' here, because when connecting with 'native-tls', the connection will remain unresponsive.
+
+# In the future, we can consider migrating tiberius to:
+# mssql-client: https://github.com/praxiomlabs/rust-mssql-drive
+# mssql-rs    : https://github.com/microsoft/mssql-rs
+
+[target."cfg(target_os = \"windows\")".dependencies]
+tiberius = { git = "https://github.com/DataflareApp/tiberius", rev = "9cfc142f1c501c08d59e6c0b0ad62a2712cfc173", default-features = false, features = ["tds73", "rustls", "time", "rust_decimal", "winauth"] }
+
+[target."cfg(any(target_os = \"macos\", target_os = \"linux\"))".dependencies]
+tiberius = { git = "https://github.com/DataflareApp/tiberius", rev = "9cfc142f1c501c08d59e6c0b0ad62a2712cfc173", default-features = false, features = ["tds73", "rustls", "time", "rust_decimal", "integrated-auth-gssapi"] }

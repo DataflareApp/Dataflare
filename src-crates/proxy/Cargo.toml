@@ -1,0 +1,11 @@
+[package]
+name = "proxy"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+reqwest = { path = "../reqwest" }
+futures-util = { workspace = true }
+russh = "0.58.0"

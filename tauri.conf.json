@@ -1,0 +1,64 @@
+{
+    "$schema": "https://schema.tauri.app/config/2",
+    "productName": "Dataflare",
+    "version": "2.10.2",
+    "identifier": "app.dataflare.desktop",
+    "build": {
+        "beforeDevCommand": "pnpm dev:web",
+        "beforeBuildCommand": "pnpm build:web",
+        "devUrl": "http://localhost:5173",
+        "frontendDist": "./dist/"
+    },
+    "bundle": {
+        "active": true,
+        "targets": ["app", "dmg", "appimage", "nsis"],
+        "category": "DeveloperTool",
+        "copyright": "Copyright © 2026 Dataflare.",
+        "shortDescription": "",
+        "longDescription": "",
+        "icon": [
+            "icons/32x32.png",
+            "icons/128x128.png",
+            "icons/128x128@2x.png",
+            "icons/icon.icns",
+            "icons/icon.ico"
+        ],
+        "fileAssociations": [
+            {
+                "ext": ["db", "sqlite", "sqlite3"],
+                "mimeType": "application/x-sqlite3",
+                "name": "SQLite file",
+                "description": "SQLite file"
+            },
+            {
+                "ext": ["duckdb", "ddb"],
+                "mimeType": "application/x-duckdb",
+                "name": "DuckDB file",
+                "description": "DuckDB file"
+            }
+        ],
+        "macOS": {
+            "providerShortName": null,
+            "signingIdentity": null,
+            "entitlements": "./entitlements.plist"
+        },
+        "windows": {
+            "digestAlgorithm": "sha256",
+            "nsis": {
+                "installerIcon": "icons/icon.ico"
+            }
+        },
+        "createUpdaterArtifacts": "v1Compatible"
+    },
+    "app": {
+        "security": {
+            "csp": null
+        }
+    },
+    "plugins": {
+        "updater": {
+            "endpoints": ["https://api.dataflare.app/release/{{target}}/{{arch}}/{{current_version}}"],
+            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEE5N0VCMjZFOTU4MzNEOTIKUldTU1BZT1ZickorcVFKNVNqQVlIcmJscnQ2Y1dTS3VhMU9uYnA3VVhIMXlWbFg2K2ZXWW5va1cK"
+        }
+    }
+}
