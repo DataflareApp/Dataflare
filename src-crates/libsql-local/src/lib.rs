@@ -11,19 +11,19 @@ use std::{ffi::c_void, sync::Mutex, time::Instant};
 // Do not update manually
 // Use `node ./src-dylib/driver-update.mjs` update the sha256 values.
 
-const LIBSQL_DRIVER_VERSION: &str = "20260416";
+const LIBSQL_DRIVER_VERSION: &str = "20260506";
 #[cfg(all(target_os = "macos", target_arch = "aarch64"))]
-const LIBSQL_SHA256: &str = "6a4b0e575ddef910d9bb8aad89e45d2e8e9d3fd1d9fe2ad426f5ac02d89c0914";
+const LIBSQL_SHA256: &str = "1842fb3a5111d65911bbd726c9497e93cd75200622709b94af4d880e12619142";
 #[cfg(all(target_os = "macos", target_arch = "x86_64"))]
-const LIBSQL_SHA256: &str = "c59417794c92de8feecfd6932a0fb4debf2b3a382458078352d1fdca72386730";
+const LIBSQL_SHA256: &str = "cf8a2f1f6b1ec6abb2c34f0043adee519cca6eaaede2c3a8f8fa003018196010";
 #[cfg(all(target_os = "linux", target_arch = "aarch64", target_env = "gnu"))]
-const LIBSQL_SHA256: &str = "f508be35390998040f37035f42dbf7556f1862cf50940003b73a8d57191f8b9e";
+const LIBSQL_SHA256: &str = "99266368263f8b10df41660573d0da6212899fa0bd7d26016cdc75f71cc26f7f";
 #[cfg(all(target_os = "linux", target_arch = "x86_64", target_env = "gnu"))]
-const LIBSQL_SHA256: &str = "3b05f15f2b297df11f4f3ca8abc37a0e58c2a89ec02947ee64d9d444a6fab92f";
+const LIBSQL_SHA256: &str = "633a2cdd07c4411c7634a894fac204dfa273ca41f5b5fc8a789bacf66a468e80";
 #[cfg(all(target_os = "windows", target_arch = "aarch64", target_env = "msvc"))]
-const LIBSQL_SHA256: &str = "f6a1fdbccf5ed79e10a418a77c284b8394f04027957f6a244ddd071ee8f8114f";
+const LIBSQL_SHA256: &str = "630e385590452563024ad7bdb4a5149d648e196cf2edbeee5bbe84efa8536174";
 #[cfg(all(target_os = "windows", target_arch = "x86_64", target_env = "msvc"))]
-const LIBSQL_SHA256: &str = "e633576d1d3195f7e1ffa3fdb01c965896e0b0a371fde846963d2de8be511ac8";
+const LIBSQL_SHA256: &str = "c8d68bb3c44ab3dd698950dba7fdb06b320cb62ba1e676c335f8b281af720daa";
 
 #[derive(Debug)]
 pub struct Connection {

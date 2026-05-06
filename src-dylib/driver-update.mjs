@@ -7,8 +7,8 @@ import crypto from 'crypto'
 // src-crates/turso-local/src/lib.rs
 // src-crates/duckdb/src/lib.rs
 
-const name = 'turso'
-const version = '20260420'
+const name = 'duckdb'
+const version = '20260506'
 
 const base = 'https://assets.dataflare.app/drivers/'
 const items = [

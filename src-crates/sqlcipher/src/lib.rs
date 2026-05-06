@@ -11,19 +11,19 @@ use std::{ffi::c_void, sync::Mutex, time::Instant};
 // Do not update manually
 // Use `node ./src-dylib/driver-update.mjs` update the sha256 values.
 
-const DRIVER_VERSION: &str = "20260416";
+const SQLCIPHER_DRIVER_VERSION: &str = "20260506";
 #[cfg(all(target_os = "macos", target_arch = "aarch64"))]
-const DRIVER_SHA256: &str = "b8fd305d62968f60dae33a14a0988987ea2c718605e94fdee27468066e63e25b";
+const SQLCIPHER_SHA256: &str = "f5445d0fdc6703c8734fe9846ddc8a63de21b8f7d8d4862388f72b67886150c0";
 #[cfg(all(target_os = "macos", target_arch = "x86_64"))]
-const DRIVER_SHA256: &str = "aad863281e363971daf42b1dba27bced00f36902272f10be4a6ae6efd66f6879";
+const SQLCIPHER_SHA256: &str = "2169d88c9ef73de97a5a12fa61424d62d38d18a0e495513f9fab210f408cc2c1";
 #[cfg(all(target_os = "linux", target_arch = "aarch64", target_env = "gnu"))]
-const DRIVER_SHA256: &str = "6ef73848f5e1a63f6469b6a5a19b72505c3607b6ad99ae01c4ae4e23100c46da";
+const SQLCIPHER_SHA256: &str = "7c3b2353088c2c4ec292cb1268e1846660cd2c9e6a05dfbb9779763b95b72010";
 #[cfg(all(target_os = "linux", target_arch = "x86_64", target_env = "gnu"))]
-const DRIVER_SHA256: &str = "35470a594432d59d8f6f74796de351fc7705cdc49efa8bd7863390ce3ce028a2";
+const SQLCIPHER_SHA256: &str = "b990517a87263cba8332e8be3a758f49eb49ba504d4fc0c27f991f80579e8d20";
 #[cfg(all(target_os = "windows", target_arch = "aarch64", target_env = "msvc"))]
-const DRIVER_SHA256: &str = "808ffad4d8ba66ae488e0a7fb65b6a8c4d2079adfa4fa3806ea195b0a4165ed8";
+const SQLCIPHER_SHA256: &str = "aa1d48d8f7507de34b742a6055042360af8adf9388b00827bc6efdb4031b2cb6";
 #[cfg(all(target_os = "windows", target_arch = "x86_64", target_env = "msvc"))]
-const DRIVER_SHA256: &str = "d1f00da6244bc1bcae177679ff7ce02a2497e67b2e8086a220bada4648a138da";
+const SQLCIPHER_SHA256: &str = "e69d6d4df9271d5d99000c18a2ce81cb10e43ee716dcce13b9133ada33096121";
 
 #[derive(Debug)]
 pub struct Connection {
@@ -52,7 +52,7 @@ fn free_error(dylib: &Dylib, error: ErrorMessage) -> Result<Option<Error>, Error
 impl Connection {
     pub async fn connect(path: &str, readonly: bool, key: &str) -> Result<Self> {
         let mut error = ErrorMessage::null();
-        let dylib = Dylib::try_load("sqlcipher", DRIVER_VERSION, DRIVER_SHA256).await?;
+        let dylib = Dylib::try_load("sqlcipher", SQLCIPHER_DRIVER_VERSION, SQLCIPHER_SHA256).await?;
         let options = ConnectOptions {
             path: StringRef::new(path),
             readonly,
