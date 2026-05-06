@@ -1,3 +1,16 @@
+## v3.0.0
+
+**Published:** `2026-05-06T16:00:00Z`
+
+**Changes**
+
+- Rewrite auto-complete component
+- Rewrite checkbox component
+- Upgrade Tauri to latest version
+- Add CLI crate
+- Fix PostgreSQL affected rows error
+- Fix URL canonicalization bug in AI providers
+
 ## v2.10.2
 
 **Published:** `2026-04-21T14:04:02Z`
