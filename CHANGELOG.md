@@ -1,3 +1,11 @@
+## v3.0.1
+
+**Published:** `Unreleased`
+
+**Changes**
+
+- Add the Japanese translations. **Contributor**: @cwatanab
+
 ## v3.0.0
 
 **Published:** `2026-05-06T16:00:00Z`

@@ -68,7 +68,7 @@ export const Settings = () => {
                 orientation='vertical'
                 className='flex flex-1 overflow-hidden'
             >
-                <Tabs.List className='flex w-44 flex-col gap-1 border-r border-separator bg-zinc-100 p-2 dark:bg-zinc-900'>
+                <Tabs.List className='flex min-w-44 flex-col gap-1 border-r border-separator bg-zinc-100 p-2 dark:bg-zinc-900'>
                     {tabsConfig.map((tab) => {
                         const Icon = tab.icon
                         return (

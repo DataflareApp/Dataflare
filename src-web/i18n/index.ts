@@ -19,6 +19,10 @@ export const LANGUAGE_OPTIONS = [
     {
         name: '简体中文',
         value: Language.zhCN
+    },
+    {
+        name: '日本語',
+        value: Language.ja
     }
 ]
 
@@ -50,6 +54,10 @@ const Storage = {
                 }
                 case 'zh-cn': {
                     return Language.zhCN
+                }
+                case 'ja':
+                case 'ja-jp': {
+                    return Language.ja
                 }
             }
         }
