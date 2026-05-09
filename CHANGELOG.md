@@ -1,10 +1,11 @@
 ## v3.0.1
 
-**Published:** `Unreleased`
+**Published:** `2026-05-09T17:00:00Z`
 
 **Changes**
 
 - Add the Japanese translations. **Contributor**: @cwatanab
+- Fix Turso cipher options toggle
 
 ## v3.0.0
 
