@@ -538,7 +538,8 @@ export const translationText = {
         [Language.de]: `Hinweis: „Nur lesen"-Modus beschränkt lediglich die Änderungen über die `,
         [Language.frFR]: `Remarque : le mode "lecture seule" ne fait que limiter les modifications de l'interface utilisateur et n'est pas entièrement sécurisé.`,
         [Language.zhCN]: `注意：'只读' 模式只能限制 UI 方面的更改，它并不完全安全。`,
-        [Language.ja]: '注意: 「読み取り専用」モードはUIの変更を制限するだけであり、完全に安全というわけではありません。'
+        [Language.ja]:
+            '注意: 「読み取り専用」モードはUIの変更を制限するだけであり、完全に安全というわけではありません。'
     },
     d1ProxyMsg: {
         [Language.en]: `You only need to set this option when you need to connect to the D1 database through a reverse proxy.`,
@@ -546,7 +547,8 @@ export const translationText = {
             'Diese Einstellung müssen Sie nur aktivieren, wenn Sie sich mit einer D1-Datenbank über einen Reverse Proxy verbinden.',
         [Language.frFR]: `Vous devez uniquement définir cette option lorsque vous avez besoin de vous connecter à la base de données D1 via un proxy inverse.`,
         [Language.zhCN]: `仅当你需要通过反向代理连接到 D1 数据库时才需要设置此项`,
-        [Language.ja]: 'リバースプロキシを介してD1データベースに接続する必要がある場合にのみ、このオプションを設定する必要があります。'
+        [Language.ja]:
+            'リバースプロキシを介してD1データベースに接続する必要がある場合にのみ、このオプションを設定する必要があります。'
     },
     name: {
         [Language.en]: `Name`,
@@ -651,7 +653,8 @@ export const translationText = {
         [Language.de]: `Hinweis: Nur lokales Turso/libSQL unterstützt diese Option, sie wird für Fernverbindungen ignoriert.`,
         [Language.frFR]: `Note : Seul Turso/libSQL local prend en charge cette option, elle sera ignorée pour les connexions distantes.`,
         [Language.zhCN]: `注意：仅本地 Turso/libSQL 支持该选项，对于远程连接将会忽略。`,
-        [Language.ja]: '注意: ローカルのTurso/libSQLのみがこのオプションをサポートしています。リモート接続では無視されます。'
+        [Language.ja]:
+            '注意: ローカルのTurso/libSQLのみがこのオプションをサポートしています。リモート接続では無視されます。'
     },
     disable: {
         [Language.en]: `Disable`,
@@ -753,7 +756,8 @@ export const translationText = {
         [Language.frFR]:
             'Avertissement : La désactivation de la vérification du nom d\'hôte acceptera tout certificat valide, ce qui peut présenter de graves risques d\'attaque de type "homme du milieu".',
         [Language.zhCN]: '警告：禁用主机名验证将接受任何有效的证书，这可能会带来严重的中间人攻击风险。',
-        [Language.ja]: '警告: ホスト名検証を無効にすると、すべての有効な証明書が受け入れられ、重大な中間者攻撃のリスクが発生する可能性があります。'
+        [Language.ja]:
+            '警告: ホスト名検証を無効にすると、すべての有効な証明書が受け入れられ、重大な中間者攻撃のリスクが発生する可能性があります。'
     },
     general: {
         [Language.en]: `General`,
@@ -2120,7 +2124,8 @@ export const translationText = {
         [Language.frFR]:
             'Pour accéder aux bases de données SQLite sur un serveur distant, créez une connexion EchoLite.',
         [Language.zhCN]: '若要访问远程服务器上的 SQLite 数据库，请新建一个 EchoLite 连接。',
-        [Language.ja]: 'リモートサーバー上のSQLiteデータベースにアクセスするには、EchoLite接続を作成してください。'
+        [Language.ja]:
+            'リモートサーバー上のSQLiteデータベースにアクセスするには、EchoLite接続を作成してください。'
     },
     command: {
         [Language.en]: 'Command',
@@ -2200,7 +2205,8 @@ export const translationText = {
         [Language.frFR]:
             'Ce fichier est trop volumineux pour être prévisualisé ici. Veuillez le télécharger sur votre ordinateur local, puis le prévisualiser.',
         [Language.zhCN]: '此文件过大，无法在此处预览。请将其下载到本地后再进行预览。',
-        [Language.ja]: 'このファイルは大きすぎるため、ここではプレビューできません。ローカルのコンピューターにダウンロードしてからプレビューしてください。'
+        [Language.ja]:
+            'このファイルは大きすぎるため、ここではプレビューできません。ローカルのコンピューターにダウンロードしてからプレビューしてください。'
     },
     newChat: {
         [Language.en]: 'New Chat',
