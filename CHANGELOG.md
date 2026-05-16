@@ -1,3 +1,11 @@
+## v3.0.2
+
+**Published:** `2026-05-16T11:30:00Z`
+
+**Changes**
+
+- Upgrade Turso to v0.6.0
+
 ## v3.0.1
 
 **Published:** `2026-05-09T17:00:00Z`
