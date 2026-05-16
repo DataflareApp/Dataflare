@@ -14,4 +14,4 @@ codegen-units = 1
 strip = "symbols"
 
 [dependencies]
-turso_sdk_kit = "0.5.3"
+turso_sdk_kit = "0.6.0"

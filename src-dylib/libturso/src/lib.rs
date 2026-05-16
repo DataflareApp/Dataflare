@@ -488,4 +488,35 @@ mod tests {
             "Invalid argument supplied: Unknown cipher name: error-cipher"
         );
     }
+
+    #[test]
+    fn test_vacuum() {
+        let path = std::env::temp_dir()
+            .join(format!("test_vacuum_{}.db", std::process::id()))
+            .display()
+            .to_string();
+
+        let mut error = ErrorMessage::null();
+        let conn = df_connect(options(&path), &mut error);
+        assert!(!conn.is_null());
+        assert!(error.is_null());
+
+        df_execute_batch(
+            conn,
+            StringRef::new(
+                r#"create table test (a integer, b real, c text);
+            insert into test values (1, 1.1, 'hello');
+            insert into test values (2, 2.2, 'world');
+            "#,
+            ),
+            &mut error,
+        );
+        assert!(error.is_null());
+
+        let mut error = ErrorMessage::null();
+        df_execute(conn, StringRef::new("VACUUM"), &mut error);
+        assert!(error.is_null());
+
+        df_close(conn);
+    }
 }

@@ -16,8 +16,7 @@ impl Connection {
         path: impl AsRef<str>,
         encryption: Option<EncryptionOpts>,
     ) -> Result<Self, TursoError> {
-        let features =
-            "encryption,attach,custom_types,autovacuum,index_method,views,generated_columns";
+        let features = "encryption,attach,custom_types,autovacuum,index_method,views,generated_columns,vacuum,without_rowid";
         let config = TursoDatabaseConfig {
             path: path.as_ref().into(),
             experimental_features: Some(features.into()),
